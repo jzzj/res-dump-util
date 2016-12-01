@@ -1,0 +1,26 @@
+{
+  "name": "res-dump-util",
+  "version": "0.0.1",
+  "description": "Util for res-dump-service and res-dump-plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jzzj/res-dump-util.git"
+  },
+  "keywords": [
+    "res-dump",
+    "util"
+  ],
+  "author": "zangzhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jzzj/res-dump-util/issues"
+  },
+  "homepage": "https://github.com/jzzj/res-dump-util#readme",
+  "devDependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
