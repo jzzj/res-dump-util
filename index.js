@@ -11,10 +11,16 @@ var versionCache = {};
 var util = {
 	// append hash code to original path.
 	makeHash: function(path, hash){
+		if(util.isRoot(path)){
+			return path;
+		}
 		return path.replace(/(^.*\/.*?)(\..*)$/, '$1.'+hash+'$2')
 	},
 	mkdirp: function(dir){
 		mkdirp.sync(dir);
+	},
+	isRoot: function(url){
+		return /^(?:http|\/\/)/.test(url);
 	},
 	getVersion: function(file, mode){
 		mode = mode || config.versionMode;
@@ -43,6 +49,9 @@ var util = {
 		return ret;
 	},
 	relative: function(relativePath){
+		if(util.isRoot(relativePath)){
+			return relativePath;
+		}
 		return path.resolve(rootDir, ("."+relativePath).replace(/^\.{2,}/, '.'));
 	},
 	lookup: function(pattern, reg){

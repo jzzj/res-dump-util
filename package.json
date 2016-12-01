@@ -1,6 +1,6 @@
 {
   "name": "res-dump-util",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Util for res-dump-service and res-dump-plugin.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/jzzj/res-dump-util/issues"
   },
   "homepage": "https://github.com/jzzj/res-dump-util#readme",
-  "devDependencies": {
+  "dependencies": {
     "mkdirp": "^0.5.1"
   }
 }
