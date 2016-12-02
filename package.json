@@ -1,6 +1,6 @@
 {
   "name": "res-dump-util",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Util for res-dump-service and res-dump-plugin.",
   "main": "index.js",
   "scripts": {

@@ -11,10 +11,7 @@ var versionCache = {};
 var util = {
 	// append hash code to original path.
 	makeHash: function(path, hash){
-		if(util.isRoot(path)){
-			return path;
-		}
-		return path.replace(/(^.*\/.*?)(\..*)$/, '$1.'+hash+'$2')
+		return path.replace(/(^.*\/.*)(\..*)$/, '$1.'+hash+'$2')
 	},
 	mkdirp: function(dir){
 		mkdirp.sync(dir);
