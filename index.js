@@ -45,11 +45,11 @@ var util = {
 		versionCache[file] = ret;
 		return ret;
 	},
-	relative: function(relativePath){
+	relative: function(relativePath, dir){
 		if(util.isRoot(relativePath)){
 			return relativePath;
 		}
-		return path.resolve(rootDir, ("."+relativePath).replace(/^\.{2,}/, '.'));
+		return path.resolve(dir ? dir : rootDir, ("."+relativePath).replace(/^\.{2,}/, '.'));
 	},
 	lookup: function(pattern, reg){
 		var files = glob.sync(pattern);
@@ -74,6 +74,9 @@ var util = {
 	},
 	copyFile: function(sourceFile, destFile){
 		return fs.createReadStream(sourceFile).pipe(fs.createWriteStream(destFile));
+	},
+	getFolder: function(file){
+		return file.replace(/(^.*\/).*$/, '$1');
 	}
 };
 
